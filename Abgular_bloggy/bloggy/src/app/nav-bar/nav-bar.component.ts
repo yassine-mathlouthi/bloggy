@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalServviceService } from '../global-servvice.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  logo_path="assets/image/bloggy_logo.png"
-
+  
+  constructor(public logo:GlobalServviceService){}
 }
