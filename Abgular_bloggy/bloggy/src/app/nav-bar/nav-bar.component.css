@@ -1,0 +1,14 @@
+.logo_size_adjust{
+    width: 90px;
+    height: 50px;
+}
+.colors{
+    color:        #E9CBFF;
+    color:        rgb(227,207,254);
+    /* back ground color */
+    color:        rgb(185,142,238);
+    /* nav bar background color */ 
+}
+.navbar-color{
+    background-color: rgb(185,142,238);
+}
