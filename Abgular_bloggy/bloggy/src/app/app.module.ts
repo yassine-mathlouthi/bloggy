@@ -7,6 +7,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BlogComponent } from './blog/blog.component';
+import { LeftSideBlogsComponent } from './left-side-blogs/left-side-blogs.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ProfileComponent } from './profile/profile.component';
     NavBarComponent,
     PageNotFoundComponent,
     HomePageComponent,
-    ProfileComponent
+    ProfileComponent,
+    BlogComponent,
+    LeftSideBlogsComponent
   ],
   imports: [
     BrowserModule,

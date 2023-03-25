@@ -3,130 +3,53 @@
       <div class="col-lg-4 new-blog">
         <div class="row animate__animated animate__fadeUp">
           <div class="col offset-1">
-            <h3 class="new-blog-title animate__animated animate__slideInLeft">New blogs</h3>
-            <div class="new-blogs">
-              <div class="row blog-new-blog animate__animated animate__zoomIn ">
-                <div class="col-5">
-                  <img [src]="logo.blog_image" alt="new blogs img" class="img-fluid img-box">
-                </div>
-                <div class="col new-blog-text ">
-                  <h4 class="blog-title text-wrap">Blog title </h4>
-                  <div class="new-blog-description text-wrap"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. vel hendrerit neque sollicitudin at. </div>
-                  <div class="">
-                    <button class="btn  btn-color offset-6">
-                      <span class="d-inline ">More</span>
-                      <span class="d-inline bi bi-arrow-right"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h3 class="new-blog-title animate__animated animate__slideInLeft">New blogs</h3>            
+            <app-left-side-blogs></app-left-side-blogs>
           </div>
         </div>
         <div class="row">
           <div class="col offset-1 ">
             <h3 class="new-blog-title animate__animated animate__slideInLeft">Popular blogs</h3>
             <div class="new-blogs">
-              <div class="row blog-new-blog animate__animated animate__zoomIn">
-                <div class="col-5">
-                  <img [src]="logo.blog_image" alt="new blogs img" class="img-fluid img-box">
-                </div>
-                <div class="col new-blog-text ">
-                  <h4 class="blog-title text-wrap">Blog title </h4>
-                  <div class="new-blog-description text-wrap"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. vel hendrerit neque sollicitudin at. </div>
-                  <div class="">
-                    <button class="btn  btn-color offset-6">
-                      <span class="d-inline">More</span>
-                      <span class="d-inline bi bi-arrow-right"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <app-left-side-blogs></app-left-side-blogs>
             </div>
             <div class="new-blogs">
-              <div class="row blog-new-blog animate__animated animate__zoomIn">
-                <div class="col-5">
-                  <img [src]="logo.blog_image" alt="new blogs img" class="img-fluid img-box">
-                </div>
-                <div class="col new-blog-text ">
-                  <h4 class="blog-title text-wrap">Blog title </h4>
-                  <div class="new-blog-description text-wrap"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. vel hendrerit neque sollicitudin at. </div>
-                  <div class="">
-                    <button class="btn  btn-color offset-6">
-                      <span class="d-inline">More</span>
-                      <span class="d-inline bi bi-arrow-right"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <app-left-side-blogs></app-left-side-blogs>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col offset-1 ">
+            <div class="new-blogs">
+              <app-left-side-blogs></app-left-side-blogs>
+            </div>
+            <div class="new-blogs">
+              <app-left-side-blogs></app-left-side-blogs>
             </div>
           </div>
         </div>
       </div>
+
+
+
+
+
       <div class="col-lg new-blog">
         <div class="row">
           <div class="col offset-1">
-            <h3 class="new-blog-title animate__animated animate__slideInRight">Football</h3>
-            <div class="new-blogs">
-              <div class="row blog-category animate__animated animate__zoomIn">
-                <div class="col-5">
-                  <img [src]="logo.blog_image" alt="new blogs img" class="img-fluid ">
-                </div>
-                <div class="col new-blog-text ">
-                  <h4 class="blog-title text-wrap">Blog title </h4>
-                  <div class="new-blog-description text-wrap"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. vel hendrerit neque sollicitudin at. </div>
-                  <div class="">
-                    <button class="btn  btn-color offset-6">
-                      <span class="d-inline ">More</span>
-                      <span class="d-inline bi bi-arrow-right"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h3 class="new-blog-title animate__animated animate__slideInRight">Cars</h3>
+            <app-blog></app-blog>
           </div>
         </div>
         <div class="row">
             <div class="col offset-1">
-              <div class="new-blogs mt-3">
-                <div class="row blog-category animate__animated animate__zoomIn">
-                  <div class="col-5">
-                    <img [src]="logo.blog_image" alt="new blogs img" class="img-fluid ">
-                  </div>
-                  <div class="col new-blog-text ">
-                    <h4 class="blog-title text-wrap">Blog title </h4>
-                    <div class="new-blog-description text-wrap"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. vel hendrerit neque sollicitudin at. </div>
-                    <div class="">
-                      <button class="btn  btn-color offset-6">
-                        <span class="d-inline">More</span>
-                        <span class="d-inline bi bi-arrow-right"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <app-blog ></app-blog>
             </div>
           </div>
           <div class="row">
             <div class="col offset-1">
               <h3 class="new-blog-title animate__animated animate__slideInRight">Cars</h3>
-              <div class="new-blogs">
-                <div class="row blog-category">
-                  <div class="col-5">
-                    <img [src]="logo.blog_image" alt="new blogs img" class="img-fluid ">
-                  </div>
-                  <div class="col new-blog-text ">
-                    <h4 class="blog-title text-wrap">Blog title </h4>
-                    <div class="new-blog-description text-wrap"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. vel hendrerit neque sollicitudin at. </div>
-                    <div class="">
-                      <button class="btn  btn-color offset-6">
-                        <span class="d-inline">More</span>
-                        <span class="d-inline bi bi-arrow-right"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <app-blog></app-blog>
             </div>
           </div>
       </div>
