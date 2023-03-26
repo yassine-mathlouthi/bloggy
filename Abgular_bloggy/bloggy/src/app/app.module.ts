@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
 import { LeftSideBlogsComponent } from './left-side-blogs/left-side-blogs.component';
+import { NavbarFoneComponent } from './navbar-fone/navbar-fone.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LeftSideBlogsComponent } from './left-side-blogs/left-side-blogs.compon
     HomePageComponent,
     ProfileComponent,
     BlogComponent,
-    LeftSideBlogsComponent
+    LeftSideBlogsComponent,
+    NavbarFoneComponent
   ],
   imports: [
     BrowserModule,
