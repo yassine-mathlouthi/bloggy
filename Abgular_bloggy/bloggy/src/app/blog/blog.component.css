@@ -1,20 +1,28 @@
-.blog-category{
+.blog-cadre{
+    margin-top: 20px;
     border-color: rgb(224,209,252) ;
-    border: rgb(178, 140, 247) 1px solid;
     padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-right: 20px;
     margin-right: 30px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.blog-cadre:hover{
+    transition: 0.5s;
+    translate:2px -7px 5px ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .blog-title{
     padding: 10px;
     font-family: Tiro Devanagari Hindi;
     font-size: 30px;
 }
-.new-blog-description{
+.blog-description{
     font-family: Tiro Devanagari Hindi;
-    color: rgb(110,85,164);
+    color: blac;
+    font-size: 15px;
 }
 .btn-color{  
     background: linear-gradient(rgb(201, 162, 248), rgb(228, 213, 246));
@@ -57,4 +65,11 @@
 .like{
     height: 30%;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pdp{
+    height: 30px;
+}
+.user-name{
+    font-size: 20px;
 }

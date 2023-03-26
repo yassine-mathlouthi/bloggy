@@ -14,7 +14,8 @@ nav{
     /* nav bar background color */ 
 }
 .navbar-color{
-    background-color: rgb(185,142,238);
+    /* background-color: rgb(185,142,238); */
+    background-color:rgb(102, 93, 162);
 }
 ul{
     margin-right: auto;
@@ -36,7 +37,8 @@ li{
     font-family: Alkatra;
 }
 nav .nav-element:hover{
-    color: rgb(110,85,164);
+    /* color: rgb(110,85,164); */
+    color: black;
     transition: 0.7s;
 }
 .nav-element::before{
@@ -45,7 +47,8 @@ nav .nav-element:hover{
     left:0;
     height: 2px;
     width: 0%;
-    background-color:rgb(110,85,164);
+    /* background-color:rgb(110,85,164); */
+    background-color:black;
     bottom: -2px;
     transition:0.3s ;
 }
@@ -70,3 +73,9 @@ nav .nav-element:hover{
     
 
 }
+.line-it{
+    display: inline-block;  
+}
+.container- {
+    display: flex;
+  }

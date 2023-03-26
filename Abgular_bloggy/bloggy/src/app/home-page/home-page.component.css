@@ -34,3 +34,47 @@
 .new-blog-text{
     padding: 10px;
 }
+.my-div  {
+    background-image: url('https://cdn.dribbble.com/assets/searches/search-header-800-1f49142870a5c1428edf0f570465ce9114ca4dc76f9d645bcf5c786a18dc697f.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+.home-bg{
+    background-color: rgb(254,79,128);
+}
+.title-home{
+    margin-top: 320px;
+    color: white;
+    font-size: 40px;
+
+}
+.sub-title{
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+    margin-left: 30%;
+    margin-right: 20%;
+}
+.div-input{
+    padding: 20px;
+}
+.rechercher{
+    margin-top: 30px;
+    border-radius: 10px;
+    border-width: 0;
+    margin-left: 0px;
+    background-color: white;
+    padding: 30px;
+}
+.icon {
+    padding-left: 30px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-position: 90%;
+    background-size: 20px;
+    background-color:white;
+    margin-right: 0px;
+}
+.container-1{
+    display: flex;
+}

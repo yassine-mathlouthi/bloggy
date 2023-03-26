@@ -1,4 +1,4 @@
-.con{
+/* .con{
     margin-top: 150px;
 }
 .attribut{
@@ -45,4 +45,7 @@
     margin-top: 10px;
     
 
+} */
+.cover{
+    background-color: rgb(102,93,162);
 }
