@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
 import { LeftSideBlogsComponent } from './left-side-blogs/left-side-blogs.component';
 import { NavbarFoneComponent } from './navbar-fone/navbar-fone.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavbarFoneComponent } from './navbar-fone/navbar-fone.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
