@@ -11,6 +11,10 @@ import { BlogComponent } from './blog/blog.component';
 import { LeftSideBlogsComponent } from './left-side-blogs/left-side-blogs.component';
 import { NavbarFoneComponent } from './navbar-fone/navbar-fone.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { BloggylogoComponent } from './bloggylogo/bloggylogo.component';
+import { CopyrightComponent } from './copyright/copyright.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     BlogComponent,
     LeftSideBlogsComponent,
-    NavbarFoneComponent
+    NavbarFoneComponent,
+    LoginComponent,
+    BloggylogoComponent,
+    CopyrightComponent,
+    CreateaccountComponent
   ],
   imports: [
     BrowserModule,
