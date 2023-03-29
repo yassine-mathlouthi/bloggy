@@ -13,6 +13,14 @@ import { GlobalServviceService } from '../global-servvice.service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  k=1 ;
+  x(){
+    this.k= -1*this.k
+
+  }
+
+
+  
   blogs_data: any=[]; 
   constructor(public logo:GlobalServviceService ,private blogs:GetblogsService) { }  
   ngOnInit() : void {

@@ -69,10 +69,21 @@
 }
 .pdp{
     height: 30px;
+    border: rgb(124, 123, 123) 1px solid;
 }
 .user-name{
     font-size: 20px;
+
 }
 .blogedite{
     padding: 10px;
 }
+.cheek{
+    fill: aqua;
+}
+.cheek:focus{
+    fill: black;
+}
+.cheek:checked + label {
+    font-weight: bold;
+  }
