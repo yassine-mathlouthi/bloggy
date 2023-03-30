@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component , OnInit } from '@angular/core';
 import { GetblogsService } from '../getblogs.service';
 import { GlobalServviceService } from '../global-servvice.service';
@@ -40,11 +40,15 @@ export class BlogComponent implements OnInit {
    
     incrementLikes(post_id: number) {
       var url = 'http://localhost/bloggy/likes_incc.php';
-      console.log(post_id);
+      /* console.log(post_id);
       var data = { test: post_id };
       this.http.post(url, data).subscribe(response => {
         console.log(response);
-      });
+      }); */
+      const params = new HttpParams().set('test', post_id.toString());
+      this.http.post(url, {}, { params }).subscribe(response => {
+      console.log(response);
+});
     }
 }
     
