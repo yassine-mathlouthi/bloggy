@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component , OnInit } from '@angular/core';
 import { GetblogsService } from '../getblogs.service';
 import { GlobalServviceService } from '../global-servvice.service';
@@ -18,11 +19,13 @@ export class BlogComponent implements OnInit {
     this.k= -1*this.k
 
   }
+  
 
-
+ 
+  constructor(private http:HttpClient , public logo:GlobalServviceService ,private blogs:GetblogsService) { } 
   
   blogs_data: any=[]; 
-  constructor(public logo:GlobalServviceService ,private blogs:GetblogsService) { }  
+   
   ngOnInit() : void {
     this.blogs.getBlogs().subscribe((value: Object) => {
       const res = value as any; // cast 'value' to 'Blog[]'
@@ -34,6 +37,15 @@ export class BlogComponent implements OnInit {
     }
   );
     } 
+   
+    incrementLikes(post_id: number) {
+      var url = 'http://localhost/bloggy/likes_incc.php';
+      console.log(post_id);
+      var data = { test: post_id };
+      this.http.post(url, data).subscribe(response => {
+        console.log(response);
+      });
+    }
 }
     
 
