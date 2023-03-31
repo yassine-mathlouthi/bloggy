@@ -97,6 +97,15 @@ h2 {
   font-size: 20px;
   padding-left: 10px;
   color: #00ccff;
+  
+}
+.input_text:hover{
+  border-bottom: 1px solid  #bf00ff;
+  border-radius: 20px;
+}
+.input_text:focus{
+  border-bottom: 1px solid  #bf00ff;
+  border-radius: 20px;
 }
 ::placeholder {
   font-size: 15px;
@@ -128,6 +137,10 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#login_button a:hover{
+  border: 1px solid  #bf00ff;
+  box-shadow: rgba(217, 46, 183, 0.25) 0px 13px 27px -5px, rgba(166, 17, 111, 0.3) 0px 8px 16px -8px;
 }
 .fotter {
   margin-top: 30px;

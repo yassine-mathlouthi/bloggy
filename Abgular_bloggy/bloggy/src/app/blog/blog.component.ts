@@ -14,14 +14,6 @@ import { GlobalServviceService } from '../global-servvice.service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  k=1 ;
-  x(){
-    this.k= -1*this.k
-
-  }
-  
-
- 
   constructor(private http:HttpClient , public logo:GlobalServviceService ,private blogs:GetblogsService) { } 
   
   blogs_data: any=[]; 
@@ -37,19 +29,29 @@ export class BlogComponent implements OnInit {
     }
   );
     } 
-   
+    x=0
+    like=true
     incrementLikes(post_id: number) {
-      var url = 'http://localhost/bloggy/likes_incc.php';
-      /* console.log(post_id);
-      var data = { test: post_id };
-      this.http.post(url, data).subscribe(response => {
+      if(this.like==true)
+      {
+        var url = 'http://localhost/bloggy/likes_incc.php';
+        const params = new HttpParams().set('test', post_id.toString());
+        this.http.post(url, {}, { params }).subscribe(response => {
         console.log(response);
-      }); */
-      const params = new HttpParams().set('test', post_id.toString());
-      this.http.post(url, {}, { params }).subscribe(response => {
-      console.log(response);
-});
+        });
+        this.like=!this.like ;
+      }
+      else 
+      {
+        var url = 'http://localhost/bloggy/unlike_incc.php';
+        const params = new HttpParams().set('test', post_id.toString());
+        this.http.post(url, {}, { params }).subscribe(response => {
+        console.log(response);
+        });
+        this.like=!this.like ;
+      }
     }
+    
 }
     
 
