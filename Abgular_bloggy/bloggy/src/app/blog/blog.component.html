@@ -35,6 +35,9 @@
   <hr class="line">
  
  -->
+
+
+
  <div class="row">
     <div *ngFor="let i of blogs_data"  class="col-md-4 blogedite" >
         <div class="animate__animated animate__zoomIn">
@@ -61,16 +64,15 @@
                         </div>
                         <div class="col-6">
                             <div class="offset-7 mt-2">
-                                
-                            
-                                
-                                  {{i.nb_like}}
-                                
-                            </div>
-                        
-                            
-                            
-                        </div>
+                              <input type="hidden" name="id_post" [value]="i.id">
+                              <label class="" (click)="incrementLikes(i.id)" tabindex="0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill cheek" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                              </label>
+                              {{i.nb_like}}
+                            </div> 
+                          </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,8 @@
+{
+    "/bloggy/*": {
+      "target": "http://localhost/bloggy/",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

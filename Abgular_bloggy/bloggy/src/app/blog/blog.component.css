@@ -78,12 +78,13 @@
 .blogedite{
     padding: 10px;
 }
-.cheek{
-    fill: aqua;
-}
-.cheek:focus{
+.cheek {
     fill: black;
 }
-.cheek:checked + label {
-    font-weight: bold;
-  }
+
+label:focus-within .cheek {
+    fill: red;
+}
+label:not(:focus-within) .cheek {
+    fill: black;
+}
