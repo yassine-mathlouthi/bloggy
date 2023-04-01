@@ -8,7 +8,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogComponent } from './blog/blog.component';
-import { LeftSideBlogsComponent } from './left-side-blogs/left-side-blogs.component';
 import { NavbarFoneComponent } from './navbar-fone/navbar-fone.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
@@ -24,7 +23,6 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
     HomePageComponent,
     ProfileComponent,
     BlogComponent,
-    LeftSideBlogsComponent,
     NavbarFoneComponent,
     LoginComponent,
     BloggylogoComponent,
