@@ -1,41 +1,45 @@
- <div class="row">
-    <div *ngFor="let i of blogs_data"  class="col-md-4 blogedite" >
-        <div class="animate__animated animate__zoomIn">
-            <div class="row">
-                <div class="blog-cadre">
-                    <div class="row">
-                        <img [src]="i.image_path" alt="new blogs img" class="img-fluid ">
-                    </div>
-                    <div class="row">
-                        <h4>
-                            {{i.blog_name}}
-                        </h4>
-                    </div>
-                    <div class="row">
-                        <div class="blog-description ">
-                        {{ i.short_descrption}}
+ <a class="link-blog" routerLink="displayBlog">
+    <div class="row">
+        <div *ngFor="let i of blogs_data"  class="col-md-4 blogedite" >
+            <div class="animate__animated animate__zoomIn">
+                <div class="row">
+                    <div class="blog-cadre">
+                        <div class="row">
+                            <img [src]="i.image_path" alt="new blogs img" class="img-fluid ">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 mt-2 user-name">
-                            <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="" srcset="" class="img-fluid  rounded-circle pdp mb-2">
-                            <label for="" class="ml-2"><h6>User name</h6></label>
-                            <!-- pour le moment user name and photo de profile static khater mzelt mnaarch kifeh naaml cle etranger w naaytlou  -->
+                        <div class="row">
+                            <h4>
+                                {{i.blog_name}}
+                            </h4>
                         </div>
-                        <div class="col-6">
-                            <div class="offset-7 mt-2">
-                              <input type="hidden" name="id_post" [value]="i.id">
-                              <label class="" (click)="incrementLikes(i.id)" tabindex="0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill cheek" viewBox="0 0 16 16">
-                                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                </svg>
-                              </label>
-                              {{i.nb_like}}
-                            </div> 
-                          </div>
+                        <div class="row">
+                            <div class="blog-description ">
+                            {{ i.short_descrption}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mt-2 user-name">
+                                <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="" srcset="" class="img-fluid  rounded-circle pdp mb-2">
+                                <label for="" class="ml-2"><h6>User name</h6></label>
+                                <!-- pour le moment user name and photo de profile static khater mzelt mnaarch kifeh naaml cle etranger w naaytlou  -->
+                            </div>
+                            <div class="col-6">
+                                <div class="offset-7 mt-2">
+                                  <input type="hidden" name="id_post" [value]="i.id">
+                                  <label class="" (click)="incrementLikes(i.id)" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill cheek" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                    </svg>
+                                  </label>
+                                  {{i.nb_like}}
+                                </div> 
+                              </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    
+ </a>
+ 

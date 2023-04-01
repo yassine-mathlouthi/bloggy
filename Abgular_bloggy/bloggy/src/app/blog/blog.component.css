@@ -88,3 +88,8 @@ label:focus-within .cheek {
 label:not(:focus-within) .cheek {
     fill: black;
 }
+.link-blog{
+    font-style: none;
+    text-decoration: none;
+    color: black;
+}

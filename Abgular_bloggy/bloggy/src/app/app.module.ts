@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { BloggylogoComponent } from './bloggylogo/bloggylogo.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { DisplayBlogComponent } from './display-blog/display-blog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
     LoginComponent,
     BloggylogoComponent,
     CopyrightComponent,
-    CreateaccountComponent
+    CreateaccountComponent,
+    DisplayBlogComponent
   ],
   imports: [
     BrowserModule,
