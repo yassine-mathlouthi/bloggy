@@ -23,9 +23,11 @@
             <i class="fa fa-user"></i>
             <input
               type="text"
+              name="username"
               placeholder="Username"
               class="input_text"
               autocomplete="off"
+              [(ngModel)]="data2.user"
             />
           </div>
           <div class="input_group">
@@ -34,11 +36,13 @@
               type="password"
               placeholder="Password"
               class="input_text"
+              name="password"
               autocomplete="off"
+              [(ngModel)]="data2.pass"
             />
           </div>
           <div class="button_group" id="login_button">
-            <a>Submit</a>
+            <button (click)="check()" type="submit">register</button>
           </div>
           <div class="fotter">
             <p>don't have an account?</p>

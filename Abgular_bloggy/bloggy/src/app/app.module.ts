@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { BloggylogoComponent } from './bloggylogo/bloggylogo.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,14 +30,10 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
     LoginComponent,
     BloggylogoComponent,
     CopyrightComponent,
-    CreateaccountComponent
+    CreateaccountComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

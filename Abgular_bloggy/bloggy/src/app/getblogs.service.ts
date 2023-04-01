@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GetblogsService {
+  constructor(private http: HttpClient) {}
+  getBlogs() {
+    return this.http.get('http://localhost/bloggy/select_blogs.php');
+  }
 
-  constructor(private http: HttpClient) { }
-  getBlogs(){
-    return this.http.get("http://localhost/bloggy/select_blogs.php")
+  adduser(user: any) {
+    this.http.post('http://localhost/bloggy/adduser.php', user);
   }
 }
