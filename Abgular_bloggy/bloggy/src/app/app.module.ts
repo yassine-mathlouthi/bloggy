@@ -14,10 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { BloggylogoComponent } from './bloggylogo/bloggylogo.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { DisplayBlogComponent } from './display-blog/display-blog.component';
 
 import { FormsModule } from '@angular/forms';
-
-import { DisplayBlogComponent } from './display-blog/display-blog.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,10 @@ import { DisplayBlogComponent } from './display-blog/display-blog.component';
     CreateaccountComponent,
 
     DisplayBlogComponent,
+
+    DisplayBlogComponent,
   ],
+
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
 
   providers: [],
