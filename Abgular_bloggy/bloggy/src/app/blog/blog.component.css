@@ -69,10 +69,27 @@
 }
 .pdp{
     height: 30px;
+    border: rgb(124, 123, 123) 1px solid;
 }
 .user-name{
     font-size: 20px;
+
 }
 .blogedite{
     padding: 10px;
+}
+.cheek {
+    fill: black;
+}
+
+label:focus-within .cheek {
+    fill: red;
+}
+label:not(:focus-within) .cheek {
+    fill: black;
+}
+.link-blog{
+    font-style: none;
+    text-decoration: none;
+    color: black;
 }

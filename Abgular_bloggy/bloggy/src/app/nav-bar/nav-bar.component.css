@@ -3,41 +3,31 @@ nav{
     width:  100%;
 }
 .logo_size_adjust{
-    width: 90px;
-    height: 50px;
-}
-.colors{
-    color:        #E9CBFF;
-    color:        rgb(227,207,254);
-    /* back ground color */
-    color:        rgb(185,142,238);
-    /* nav bar background color */ 
+    width: 80px;
+    height: 40px;
 }
 .navbar-color{
-    /* background-color: rgb(185,142,238); */
     background-color:rgb(102, 93, 162);
 }
 ul{
     margin-right: auto;
-    margin-top: 15px;
-    
+    margin-top: 15px; 
 }
 li{
     display: inline-block;
-  margin-right: 10px;
+    margin-right: 10px;
  
 }
 .nav-element{
     text-decoration: none;
     color: white;
     position:relative;
-    font-size: 20px;
+    font-size: 17px;
     padding-left: 15px;
     padding-right: 15px;
     font-family: Alkatra;
 }
 nav .nav-element:hover{
-    /* color: rgb(110,85,164); */
     color: black;
     transition: 0.7s;
 }
@@ -47,7 +37,6 @@ nav .nav-element:hover{
     left:0;
     height: 2px;
     width: 0%;
-    /* background-color:rgb(110,85,164); */
     background-color:black;
     bottom: -2px;
     transition:0.3s ;
@@ -57,12 +46,12 @@ nav .nav-element:hover{
 }
 .btn-color{
     font-family: Alkatra;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-color: rgb(185,142,238);
     border-radius:20px ;
-    padding: 10px 20px;
+    padding: 7px 17px;
     transition:0.6s ease;
-    box-shadow: rgb(208, 187, 234) 0px 4px 16px, rgb(199, 169, 235) 0px 8px 24px, rgb(217, 191, 250) 0px 16px 56px;
+    box-shadow: rgb(176, 143, 216) 0px 4px 16px, rgb(165, 123, 216) 0px 8px 24px, rgb(188, 154, 232) 0px 16px 56px;
 }
 .btn-color:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -70,8 +59,6 @@ nav .nav-element:hover{
     background: linear-gradient(rgb(201, 162, 248), rgb(228, 213, 246));
     transform: translate(1px , 1px );
     transition:0.6s ease;
-    
-
 }
 .line-it{
     display: inline-block;  

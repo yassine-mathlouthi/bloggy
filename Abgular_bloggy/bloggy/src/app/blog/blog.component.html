@@ -1,67 +1,45 @@
-<!-- <div class="animate__animated animate__zoomIn mt-5"  >
-    <div class="row blog-cadre">
-        <div class="row poster_details">
-            <div class="col-4 col-sm-2 ">
-                <img [src]="logo.pdp" alt="" srcset="" class="img-fluid">
-            </div>
-            <div class="col">
-                <div class=" text-fluid user_name ">
-                    User_name
-                </div> 
-
-                <div class="text text-secondary info"> Tunis, 20/20/2022 14:16 </div>
-                
-            </div>
-        </div>
-      <div class="col-12 mt-2">
-        <img [src]="logo.blog_image" alt="new blogs img" class="img-fluid ">
-      </div>
-      <div class="col new-blog-text ">
-        <h4 class="blog-title text-wrap">Blog title </h4>
-        <div class="new-blog-description text-wrap">Lorem ipsum dm faucibus, nisi ut pharetra lacinia
-            <div class="col-9">
-                <button class="btn  btn-color mt-2">
-                      learn more
-                </button>
-            </div>
-            <div class="col-3">
-                <img [src]="logo.satr" alt="" srcset="" class="img-fluid like">
-                
-            </div>
-        </div>
-    </div>
-    
-  </div>
-  <hr class="line">
- 
- -->
- <div class="row">
-    <div *ngFor="let i of blogs_data"  class="col-md-4 blogedite" >
-        <div class="animate__animated animate__zoomIn">
-            <div class="row">
-                <div class="blog-cadre">
-                    <div class="row">
-                        <img [src]="i.image_path" alt="new blogs img" class="img-fluid ">
-                    </div>
-                    <div class="row">
-                        <h4>
-                            {{i.blog_name}}
-                        </h4>
-                    </div>
-                    <div class="row">
-                        <div class="blog-description ">
-                        {{ i.short_descrption}}
+ <a class="link-blog" routerLink="displayBlog">
+    <div class="row">
+        <div *ngFor="let i of blogs_data"  class="col-md-4 blogedite" >
+            <div class="animate__animated animate__zoomIn">
+                <div class="row">
+                    <div class="blog-cadre">
+                        <div class="row">
+                            <img [src]="i.image_path" alt="new blogs img" class="img-fluid ">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 mt-2 user-name">
-                            <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="" srcset="" class="img-fluid rounded pdp mb-2">
-                            User name
-                            <!-- pour le moment user name and photo de profile static khater mzelt mnaarch kifeh naaml cle etranger w naaytlou  -->
+                        <div class="row">
+                            <h4>
+                                {{i.blog_name}}
+                            </h4>
+                        </div>
+                        <div class="row">
+                            <div class="blog-description ">
+                            {{ i.short_descrption}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mt-2 user-name">
+                                <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="" srcset="" class="img-fluid  rounded-circle pdp mb-2">
+                                <label for="" class="ml-2"><h6>User name</h6></label>
+                                <!-- pour le moment user name and photo de profile static khater mzelt mnaarch kifeh naaml cle etranger w naaytlou  -->
+                            </div>
+                            <div class="col-6">
+                                <div class="offset-7 mt-2">
+                                  <input type="hidden" name="id_post" [value]="i.id">
+                                  <label class="" (click)="incrementLikes(i.id)" tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill cheek" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                    </svg>
+                                  </label>
+                                  {{i.nb_like}}
+                                </div> 
+                              </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    
+ </a>
+ 
