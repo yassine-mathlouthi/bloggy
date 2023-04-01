@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalServviceService } from '../global-servvice.service';
 
 @Component({
   selector: 'app-display-blog',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./display-blog.component.css']
 })
 export class DisplayBlogComponent {
+  constructor(public res:GlobalServviceService){}
 
 }
