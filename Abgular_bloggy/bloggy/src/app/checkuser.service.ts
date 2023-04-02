@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CheckuserService {
+
   private timeoutId: any;
 
   constructor() {}
@@ -26,4 +27,14 @@ export class CheckuserService {
     const token = localStorage.getItem('token');
     return !!token && token === 'valid_token';
   }
+
+  /* constructor(private http: HttpClient) {}
+  checkuser(ch: any) {
+    return this.http
+      .post('http://localhost/bloggy/checkuser.php', ch)
+      .subscribe((response) => {
+        console.log(response);
+      });
+  } */
+
 }

@@ -4,27 +4,25 @@
         <div class="row mt-md-5 ">
             <div class="col-md-6 animate__animated animate__zoomIn">
                 <div class="row">
-                    <h1 class="animate__animated animate__tada">BLOG TITLE</h1>
+                    <h1 class="animate__animated animate__tada">{{blog_data[0].blog_name}}</h1>
                 </div> 
                 <div class="row">
                     <div class="discription-short mt-2">
-                       <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor nibh eu urna venenatis bibendum.</h6> 
+                       <h6>{{blog_data[0].short_descrption}}.</h6> 
                     </div>
                 </div>
                 <div class="row">
                     <div class="discription-full mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor nibh eu urna venenatis bibendum. Duis vel elit euismod, feugiat arcu at, dictum augue. Sed euismod leo sit amet odio aliquet, id accumsan velit lobortis. Fusce euismod euismod ipsum vel commodo. Nulla sed fringilla metus, in laoreet purus. Duis lacinia quam at urna bibendum commodo. Integer quis ultricies dolor, eu aliquet orci. Donec eu commodo elit, non facilisis mauris. Nam at rutrum odio. In ac nibh eu mi finibus blandit. Aenean rhoncus velit et ipsum fermentum, eget volutpat leo luctus.
-                        Suspendisse auctor leo a ante consectetur, id convallis magna scelerisque. Fusce sit amet sodales quam, ut fringilla lorem. Donec et sem vel elit malesuada auctor. Maecenas et tortor quis ipsum mollis bibendum. Fusce ut ex ac tortor lacinia blandit eget eget lorem. Nulla at luctus lorem, ac interdum nibh. Praesent ut est urna. Nullam blandit arcu nec enim ultrices, vitae hendrerit dolor ultricies. Suspendisse potenti. Nunc id urna malesuada, iaculis tellus eu, hendrerit mi. Donec eget nibh nec ex luctus faucibus. Nulla facilisi.
+                        {{blog_data[0].description}}.
                     </div>
                 </div>
                 
             </div>
             <div class="col-md-6 mt-5">
-                <img [src]="res.blog_image" alt="blog image" class="img-fluid animate__animated animate__zoomIn">
+                <img [src]=" blog_data[0].image_path                " alt="blog image" class="img-fluid animate__animated animate__zoomIn">
             </div>
         </div>
-    </div>
-   
+    </div> 
 </div>
 <div class="mt-2">
     <app-copyright></app-copyright>
