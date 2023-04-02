@@ -5,12 +5,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CheckuserService {
-  constructor(private http: HttpClient) {}
-  checkuser(ch: any) {
-    return this.http
-      .post('http://localhost/bloggy/checkuser.php', ch)
-      .subscribe((response) => {
-        console.log(response);
-      });
+  private timeoutId: any;
+
+  constructor() {}
+
+  startSessionTimeout(timeoutSeconds: number, onTimeout: () => void) {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+    }
+    this.timeoutId = setTimeout(onTimeout, timeoutSeconds * 1000);
+  }
+
+  clearSessionTimeout() {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+    }
+  }
+
+  isSessionActive(): boolean {
+    const token = localStorage.getItem('token');
+    return !!token && token === 'valid_token';
   }
 }
