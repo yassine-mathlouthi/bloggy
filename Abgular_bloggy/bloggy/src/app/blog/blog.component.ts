@@ -2,25 +2,18 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component , OnInit } from '@angular/core';
 import { GetblogsService } from '../getblogs.service';
 import { GlobalServviceService } from '../global-servvice.service';
-/* interface Blog {
-  id: number;
-  blog_name: string;
-  content: string;
-} */
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  constructor(private http:HttpClient , public logo:GlobalServviceService ,private blogs:GetblogsService) { } 
-  
-  blogs_data: any=[]; 
-   
+  constructor(private router: Router , private http:HttpClient , public logo:GlobalServviceService ,private blogs:GetblogsService) { } 
+  blogs_data: any=[];  
   ngOnInit() : void {
-    this.blogs.getBlogs().subscribe((value: Object) => {
-      const res = value as any; // cast 'value' to 'Blog[]'
+      this.blogs.getBlogs().subscribe((value: Object) => {
+      const res = value as any;
       this.blogs_data=res ;
       console.log(res);
     },
@@ -29,9 +22,10 @@ export class BlogComponent implements OnInit {
     }
   );
     } 
-    x=0
     like=true
-    incrementLikes(post_id: number) {
+    incrementLikes(event : MouseEvent, post_id: number) {
+      event.preventDefault();
+      event.stopPropagation();
       if(this.like==true)
       {
         var url = 'http://localhost/bloggy/likes_incc.php';
@@ -50,8 +44,14 @@ export class BlogComponent implements OnInit {
         });
         this.like=!this.like ;
       }
+    }   
+    displayBlog(idBlog : any)
+    {
+      this.logo.id_blog=idBlog ; 
     }
-    
+    goToBlog(id: number) {
+      this.router.navigate(['/blog', id]);
+    }
 }
     
 

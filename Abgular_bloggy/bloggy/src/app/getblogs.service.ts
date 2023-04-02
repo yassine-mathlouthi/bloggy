@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient , HttpParams } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
@@ -8,8 +8,13 @@ export class GetblogsService {
   getBlogs() {
     return this.http.get('http://localhost/bloggy/select_blogs.php');
   }
-
-  adduser(user: any) {
-    this.http.post('http://localhost/bloggy/adduser.php', user);
+  getBlog(id: any) {
+    const url = 'http://localhost/bloggy/displayBlog.php';
+    const params = new HttpParams().set('idBlog', id.toString());
+    return this.http.post(url, {}, { params });
   }
+
+/*   adduser(user: any) {
+    this.http.post('http://localhost/bloggy/adduser.php', user);
+  } */
 }

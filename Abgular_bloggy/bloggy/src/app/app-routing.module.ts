@@ -8,11 +8,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-  {path: 'displayBlog',component:DisplayBlogComponent},
   { path: '', component: HomePageComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
   { path: 'createaccount', component: CreateaccountComponent },
+  { path:  'blog/:id',component:DisplayBlogComponent},
   { path: '**', component: PageNotFoundComponent }
   
 ];
