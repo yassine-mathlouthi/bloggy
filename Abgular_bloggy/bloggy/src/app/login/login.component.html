@@ -25,21 +25,28 @@
               type="text"
               name="username"
               placeholder="Username"
+              required
               class="input_text"
               autocomplete="off"
               [(ngModel)]="data2.user"
+              (input)="clearError()"
             />
           </div>
+
           <div class="input_group">
             <i class="fa fa-unlock-alt"></i>
             <input
               type="password"
+              required
               placeholder="Password"
               class="input_text"
               name="password"
               autocomplete="off"
               [(ngModel)]="data2.pass"
             />
+          </div>
+          <div *ngIf="!userExists" style="color: red">
+            wrong username or password
           </div>
           <div class="button_group" id="login_button">
             <button (click)="check()" type="submit">register</button>
@@ -55,5 +62,5 @@
   </body>
 </html>
 <div class="pos mt-md-5">
-  <app-copyright></app-copyright>
+  <div class="logiin"><app-copyright></app-copyright></div>
 </div>

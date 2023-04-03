@@ -14,6 +14,7 @@ export class LoginComponent {
     user: '',
     pass: '',
   };
+  userExists: boolean = true;
 
   constructor(
     private router: Router,
@@ -51,7 +52,12 @@ export class LoginComponent {
         // User does not exist
         console.log(response);
         console.log('User does not exist');
+        this.userExists = false;
       }
     });
+  }
+
+  clearError() {
+    this.userExists = true;
   }
 }

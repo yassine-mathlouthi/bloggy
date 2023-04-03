@@ -156,3 +156,11 @@ header {
   display: block;
   position: fixed;
 }
+.logiin {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  color: #fff;
+}
