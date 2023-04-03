@@ -19,7 +19,8 @@ export class LoginComponent {
     private router: Router,
     public image: GlobalServviceService,
     private http: HttpClient,
-    public checked: CheckuserService
+    public checked: CheckuserService,
+    private globalService: GlobalServviceService
   ) {}
 
   check() {
@@ -34,8 +35,14 @@ export class LoginComponent {
         console.log(response);
         console.log('User exists');
         console.log(this.data2.user);
+        localStorage.setItem('username', this.data2.user);
+        console.log('Username saved:', this.data2.user);
+        this.globalService.username = this.data2.user;
         localStorage.setItem('token', 'valid_token'); // Store the session token in local storage
         this.checked.startSessionTimeout(5, () => {
+          localStorage.setItem('username', this.data2.user);
+          this.globalService.username = this.data2.user;
+          console.log('Username saved:', this.globalService.username);
           this.router.navigate(['']);
           localStorage.removeItem('token'); // Remove the session token from local storage when the session times out
         });

@@ -4,12 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class GlobalServviceService {
-  id_blog=''
+  id_blog = '';
   logimg = 'assets/image/zyeda.png';
   logo_path = 'assets/image/bloggy_logo.png';
   blog_image = 'assets/image/blog_image.jpg';
   pdp = 'assets/image/pdp.png';
   satr = 'assets/image/bookmark.png';
   navbar = 'assets/image/navigation-bar.png';
+  username: string = '';
   constructor() {}
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalServviceService } from '../global-servvice.service';
-
 import { CheckuserService } from '../checkuser.service';
 import { Router } from '@angular/router';
 
@@ -24,6 +23,7 @@ export class HomePageComponent implements OnInit {
         localStorage.removeItem('token');
         this.router.navigate(['/login']);
       });
+      this.logo.username = localStorage.getItem('username') ?? '';
     }
   }
 }

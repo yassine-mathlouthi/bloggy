@@ -1,5 +1,4 @@
 <div class="d-none d-lg-block">
-<<<<<<< HEAD
   <nav class="navbar sticky-top navbar-color">
     <a class="" routerLink="/">
       <img [src]="logo.logo_path" alt="" srcset="" class="logo_size_adjust" />
@@ -15,8 +14,11 @@
         <a class="nav-element" routerLink="/aboutus">About us </a>
       </li>
       <li class=" ">
-        <a class="nav-element" routerLink="/profile">User_name</a> /
-        <a class="nav-element" routerLink="/aboutus">logout</a>
+        <ng-container *ngIf="checked.isSessionActive()">
+          <li class=" ">
+            <a class="nav-element" routerLink="/profile">{{ username }}</a>
+          </li>
+        </ng-container>
       </li>
     </ul>
     <button
@@ -25,35 +27,21 @@
     >
       Add new blog
     </button>
-=======
-    <nav class="navbar sticky-top navbar-color">
-        <a class="" routerLink="/">
-            <img [src]="logo.logo_path" alt="" srcset="" class="logo_size_adjust">
+
+    <ng-container *ngIf="checked.isSessionActive()">
+      <li class=" ">
+        <a class="nav-element" routerLink="/profile">{{ username }}</a> /
+        <a class="nav-element">logout</a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="!checked.isSessionActive()">
+      <li class=" ">
+        <a class="nav-element" routerLink="/createaccount">
+          sign in / log in
         </a>
-        <ul class="">
-            <li class="">
-              <a class="nav-element" routerLink="/">Home </a>
-            </li>
-            <li class=" ">
-                <a class="nav-element" routerLink="/myblogs">My blogs</a>
-              </li>
-            <li class=" ">
-                <a class="nav-element" routerLink="/aboutus">About us </a>
-              </li> 
-              <li class=" ">
-                <a class="nav-element" routerLink="/profile">User_name</a> / 
-                <a class="nav-element" routerLink="/aboutus">logout</a>
-              </li> 
-        </ul>
-        <button class="btn btn-color animate__animated animate__zoomIn " type="submit">Add new blog</button>
-        
-            <a class="nav-element" routerLink="/createaccount">
-              sign in / log in
-            </a>
->>>>>>> c181798aaf438d73be8c5b6fb4d65c000c6a337e
-
-    <a class="nav-element" routerLink="/createaccount"> sign in / log in </a>
+      </li>
+    </ng-container>
   </nav>
-</div>
 
-<app-navbar-fone></app-navbar-fone>
+  <app-navbar-fone></app-navbar-fone>
+</div>

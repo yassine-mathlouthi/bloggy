@@ -12,9 +12,9 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
   { path: 'createaccount', component: CreateaccountComponent },
-  { path:  'blog/:id',component:DisplayBlogComponent},
-  { path: '**', component: PageNotFoundComponent }
-  
+  { path: 'blog/:id', component: DisplayBlogComponent },
+
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
