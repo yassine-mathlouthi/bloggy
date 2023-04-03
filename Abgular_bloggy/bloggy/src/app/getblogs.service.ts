@@ -13,8 +13,4 @@ export class GetblogsService {
     const params = new HttpParams().set('idBlog', id.toString());
     return this.http.post(url, {}, { params });
   }
-
-/*   adduser(user: any) {
-    this.http.post('http://localhost/bloggy/adduser.php', user);
-  } */
 }

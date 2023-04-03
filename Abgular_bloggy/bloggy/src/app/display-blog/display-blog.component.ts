@@ -25,5 +25,28 @@ export class DisplayBlogComponent   {
     });
   
       
-  }   
+  }
+  like=true ;
+  incrementLikes(event : MouseEvent, post_id: number) {
+    event.preventDefault();
+    event.stopPropagation();
+    if(this.like==true)
+    {
+      var url = 'http://localhost/bloggy/likes_incc.php';
+      const params = new HttpParams().set('test', post_id.toString());
+      this.http.post(url, {}, { params }).subscribe(response => {
+      console.log(response);
+      });
+      this.like=!this.like ;
+    }
+    else 
+    {
+      var url = 'http://localhost/bloggy/unlike_incc.php';
+      const params = new HttpParams().set('test', post_id.toString());
+      this.http.post(url, {}, { params }).subscribe(response => {
+      console.log(response);
+      });
+      this.like=!this.like ;
+    }
+  }      
 }
