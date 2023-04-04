@@ -40,7 +40,7 @@ export class LoginComponent {
         console.log('Username saved:', this.data2.user);
         this.globalService.username = this.data2.user;
         localStorage.setItem('token', 'valid_token'); // Store the session token in local storage
-        this.checked.startSessionTimeout(5, () => {
+        this.checked.startSessionTimeout(600, () => {
           localStorage.setItem('username', this.data2.user);
           this.globalService.username = this.data2.user;
           console.log('Username saved:', this.globalService.username);

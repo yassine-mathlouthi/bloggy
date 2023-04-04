@@ -19,7 +19,7 @@ export class HomePageComponent implements OnInit {
     if (!this.checked.isSessionActive()) {
       this.router.navigate(['']);
     } else {
-      this.checked.startSessionTimeout(5, () => {
+      this.checked.startSessionTimeout(600, () => {
         localStorage.removeItem('token');
         this.router.navigate(['/login']);
       });
