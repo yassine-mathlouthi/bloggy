@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { AdduserService } from '../adduser.service';
 import { GlobalServviceService } from '../global-servvice.service';
 import { shareReplay } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createaccount',
@@ -39,13 +40,19 @@ export class CreateaccountComponent {
           const jsonStr = JSON.stringify(response);
           const jsonObj = JSON.parse(jsonStr);
           console.log('Response:', jsonObj); // Log the response object
-          this.message = 'cin already used';
+          if (jsonObj === 1) {
+            this.message = 'cin already used';
+          } else {
+            this.router.navigate(['']);
+          }
         },
         (error) => {
           console.log('HTTP POST error:', error); // Log any errors
         }
       );
   }
-
-  constructor(public image: GlobalServviceService, private http: HttpClient) {}
+  clearError() {
+    this.message = '';
+  }
+  constructor(public image: GlobalServviceService, private http: HttpClient,  private router: Router) {}
 }
