@@ -1,13 +1,30 @@
 <app-nav-bar></app-nav-bar>
-<div class="main">
-  <div class="container">
+
+
+<div class=" container ">
+  <div class="main">
+    
     <div class="row mt-md-5">
       <div class="col-md-6 animate__animated animate__zoomIn">
         <div class="row">
+          <div class="col-6 content">
+            <label class="userName"> 
+            <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="user" class="img-fluid rounded-circle pdp "> User name
+            </label>
+          </div>
+          <div class="col">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col content">
+
+          
           <h1 class="animate__animated animate__tada">
             {{ blog_data[0].blog_name }}
           </h1>
-          <div class="offset-2 col-6">
+        </div>
+          <div class="offset-2 col">
             <div class="offset-7 mt-2">
             <input type="hidden" name="id_post" [value]="blog_data[0].id">
             <label class="" (click)="incrementLikes(blog_data[0].id,blog_data[0].nb_like)" tabindex="0">
@@ -16,21 +33,26 @@
                 </svg>
             </label>
             {{blog_data[0].nb_like}}
-            </div>
           </div>
+            </div>
+          
         </div>
         <div class="row">
+          <div class="col content">
           <div class="discription-short mt-2">
             <h6>{{ blog_data[0].short_descrption }}.</h6>
           </div>
         </div>
+        </div>
         <div class="row">
+        <div class="col content">
           <div class="discription-full mt-3">
             {{ blog_data[0].description }}.
           </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 mt-5">
+      <div class="col-md-6 mt-5 content">
         <img
           [src]="blog_data[0].image_path"
           alt="blog image"
@@ -41,8 +63,10 @@
     <div class="row">
       
     </div>
-  </div>
+</div>
+
 </div>
 <div class="margin">
   <app-copyright></app-copyright>
 </div>
+

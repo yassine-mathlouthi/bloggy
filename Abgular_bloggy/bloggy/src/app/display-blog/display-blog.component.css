@@ -1,5 +1,12 @@
+.content{
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .main{
     margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    
 }
 img{
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
@@ -10,4 +17,14 @@ img{
 }
 .cheek {
     fill: black;
+}
+.pdp{
+    height: 70px;
+    margin-bottom: 10px;
+}
+.userName{
+    padding-top: 10px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-style: bold;
 }
