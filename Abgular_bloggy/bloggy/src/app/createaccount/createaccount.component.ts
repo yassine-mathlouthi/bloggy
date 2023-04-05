@@ -17,7 +17,8 @@ export class CreateaccountComponent {
     age: '',
   };
   ch = this.data.user;
-  message = '';
+  message = ''; /* if message ? */
+  test=false
 
   ajout() {
     var url = 'http://localhost/bloggy/adduser.php';
@@ -39,6 +40,7 @@ export class CreateaccountComponent {
           const jsonStr = JSON.stringify(response);
           const jsonObj = JSON.parse(jsonStr);
           console.log('Response:', jsonObj); // Log the response object
+          this.test=true ; 
           this.message = 'cin already used';
         },
         (error) => {
