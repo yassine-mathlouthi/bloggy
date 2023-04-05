@@ -2,6 +2,7 @@ import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { GlobalServviceService } from '../global-servvice.service';
 import { CheckuserService } from '../checkuser.service';
 import { Router } from '@angular/router';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,7 +15,9 @@ export class NavBarComponent implements OnInit, OnChanges {
   constructor(
     public logo: GlobalServviceService,
     public checked: CheckuserService,
-    private router: Router
+    private router: Router,
+    private http: HttpClient,
+    private checkuserService: CheckuserService
   ) {}
 
   ngOnInit() {
@@ -38,4 +41,15 @@ export class NavBarComponent implements OnInit, OnChanges {
     return username ? username : '';
   }
   use = this.logo.username;
+
+  logout() {
+    localStorage.removeItem('username');
+    localStorage.removeItem('token');
+    this.checkuserService.startSessionTimeout(1, () => {
+      // This code will run after 1 second
+      console.log('Session ended');
+      // Do any other necessary cleanup here
+      this.router.navigate(['']);
+    });
+  }
 }
