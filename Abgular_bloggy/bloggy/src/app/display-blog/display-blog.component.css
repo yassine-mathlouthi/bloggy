@@ -13,18 +13,19 @@ img{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .margin{
-    margin-top: 90px;
+    margin-top: 20px;
 }
 .cheek {
     fill: black;
 }
 .pdp{
-    height: 70px;
+    height: 50px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .userName{
     padding-top: 10px;
-    margin-bottom: 50px;
-    font-size: 30px;
+    padding: 10px;  
+    font-size: 17px;
     font-style: bold;
 }
