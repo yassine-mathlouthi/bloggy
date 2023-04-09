@@ -1,71 +1,59 @@
 <app-nav-bar></app-nav-bar>
-<div class="main">
-<<<<<<< HEAD
-  <div class="container">
+<div class=" container ">
+  <div class="main">
     <div class="row mt-md-5">
       <div class="col-md-6 animate__animated animate__zoomIn">
         <div class="row">
-          <h1 class="animate__animated animate__tada">
-            {{ blog_data[0].blog_name }}
-          </h1>
-=======
-    <div class="container">
-        <div class="row mt-md-5 ">
-            <div class="col-md-6 animate__animated animate__zoomIn">
-                <div class="row">
-                    <h1 class="animate__animated animate__tada">{{blog_data[0].blog_name}}</h1>
-                </div> 
-                <div class="row">
-                    <div class="discription-short mt-2">
-                       <h6>{{blog_data[0].short_descrption}}.</h6> 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="discription-full mt-3">
-                        {{blog_data[0].description}}.
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-md-6 mt-5">
-                <img [src]=" blog_data[0].image_path" alt="blog image" class="img-fluid animate__animated animate__zoomIn">
-            </div>
+          <div class="col-6 content">
+            <label class="userName">
+              <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="user" class="img-fluid rounded-circle pdp "> User name </label>
+              <div class="text text-secondary">
+                2017/11/07
+              </div>
+          </div>
         </div>
-        <div class="row mt-5">
-            <div class="offset-10 col">
-                <div class="offset-7 mt-2">
-                <input type="hidden" name="id_post" [value]="blog_data[0].id">
-                <label class="" (click)="incrementLikes($event, blog_data[0].id)" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill cheek" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                    </svg>
-                </label>
-                {{blog_data[0].nb_like}}
-                </div>
-            </div>
->>>>>>> refs/remotes/origin/main
-        </div>
+        <hr>
         <div class="row">
-          <div class="discription-short mt-2">
-            <h6>{{ blog_data[0].short_descrption }}.</h6>
+          <div class="col content">
+            <h1 class="animate__animated animate__tada">
+              {{ blog_data[0].blog_name }}
+            </h1>
+          </div>
+          <div class="offset-2 col">
+            <div class="offset-7 mt-2">
+              <input type="hidden" name="id_post" [value]="blog_data[0].id">
+              <label class="" (click)="incrementLikes(blog_data[0].id,blog_data[0].nb_like)" tabindex="0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill cheek" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                </svg>
+              </label>
+              {{blog_data[0].nb_like}}
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col content">
+            <div class="discription-short mt-2">
+              <h6>{{ blog_data[0].short_descrption }}.</h6>
+            </div>
           </div>
         </div>
         <div class="row">
-          <div class="discription-full mt-3">
-            {{ blog_data[0].description }}.
+          <div class="col content">
+            <div class="discription-full mt-3">
+              {{ blog_data[0].description }}.
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 mt-5">
-        <img
-          [src]="blog_data[0].image_path"
-          alt="blog image"
-          class="img-fluid animate__animated animate__zoomIn"
-        />
+      <div class="col-md-6 mt-5 content">
+        <img [src]="blog_data[0].image_path" alt="blog image" class="img-fluid animate__animated animate__zoomIn" />
       </div>
     </div>
+    <div class="row"></div>
   </div>
 </div>
-<div class="mt-2">
+<div class="margin">
   <app-copyright></app-copyright>
 </div>

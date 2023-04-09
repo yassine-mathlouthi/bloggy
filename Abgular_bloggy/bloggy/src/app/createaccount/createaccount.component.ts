@@ -1,6 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { AdduserService } from '../adduser.service';
 import { GlobalServviceService } from '../global-servvice.service';
 import { shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
@@ -19,7 +18,8 @@ export class CreateaccountComponent {
     age: '',
   };
   ch = this.data.user;
-  message = '';
+  message = ''; 
+  test=false
 
   ajout() {
     var url = 'http://localhost/bloggy/adduser.php';

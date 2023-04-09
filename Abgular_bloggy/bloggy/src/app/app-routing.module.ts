@@ -6,6 +6,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProfileComponent } from './profile/profile.component';
+import { InsertbloggComponent } from './insertblogg/insertblogg.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'createaccount', component: CreateaccountComponent },
   { path: 'blog/:id', component: DisplayBlogComponent },
+  { path: 'insertblogg', component: InsertbloggComponent },
 
   { path: '**', component: PageNotFoundComponent },
 ];

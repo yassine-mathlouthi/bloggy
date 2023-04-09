@@ -17,6 +17,7 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
 import { DisplayBlogComponent } from './display-blog/display-blog.component';
 
 import { FormsModule } from '@angular/forms';
+import { InsertbloggComponent } from './insertblogg/insertblogg.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     DisplayBlogComponent,
 
     DisplayBlogComponent,
+      InsertbloggComponent,
   ],
 
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],

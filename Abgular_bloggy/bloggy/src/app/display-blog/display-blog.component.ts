@@ -26,27 +26,22 @@ export class DisplayBlogComponent   {
   
       
   }
-  like=true ;
-  incrementLikes(event : MouseEvent, post_id: number) {
-    event.preventDefault();
-    event.stopPropagation();
-    if(this.like==true)
-    {
-      var url = 'http://localhost/bloggy/likes_incc.php';
-      const params = new HttpParams().set('test', post_id.toString());
-      this.http.post(url, {}, { params }).subscribe(response => {
-      console.log(response);
-      });
-      this.like=!this.like ;
+  like=false ;
+  nbLike=0
+  incrementLikes(post_id: number, nbLike: number) {
+    if (this.like == false) {
+        nbLike = nbLike + 1; // increment nbLike by 1
+        this.like = !this.like;
+    } else {
+        nbLike = nbLike - 1; // decrement nbLike by 1
+        this.like = !this.like;
     }
-    else 
-    {
-      var url = 'http://localhost/bloggy/unlike_incc.php';
-      const params = new HttpParams().set('test', post_id.toString());
-      this.http.post(url, {}, { params }).subscribe(response => {
-      console.log(response);
-      });
-      this.like=!this.like ;
-    }
-  }      
+    var url = 'http://localhost/bloggy/likes_incc.php';
+    const params = new HttpParams().set('id', post_id.toString()).append('nbLike', nbLike.toString());
+    console.log(" le nombre de react ", nbLike)
+    this.http.post(url, {}, { params }).subscribe(response => {
+        console.log(response);
+    });
 }
+
+  }      
