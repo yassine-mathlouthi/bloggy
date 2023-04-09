@@ -17,10 +17,10 @@ body {
 }
 .login_form_container {
   position: relative;
-  width: 400px;
-  height: 470px;
-  max-width: 400px;
-  max-height: 470px;
+  width: 450px;
+  height: 520px;
+  max-width: 450px;
+  max-height: 5200px;
   background: #0e1a5c;
   border-radius: 50px 5px;
   display: flex;

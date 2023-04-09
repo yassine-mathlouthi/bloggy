@@ -1,6 +1,8 @@
 import { GlobalServviceService } from '../global-servvice.service';
 import { Router } from '@angular/router';
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { CheckuserService } from '../checkuser.service';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -12,5 +14,10 @@ export class ProfileComponent implements OnInit {
     this.username = localStorage.getItem('username') ?? '';
     console.log('tesst', this.username);
   }
-  constructor(public pdp: GlobalServviceService, private router: Router) {}
+  constructor(
+    public pdp: GlobalServviceService,
+    private router: Router,
+    private checkuserService: CheckuserService,
+    public checked: CheckuserService
+  ) {}
 }

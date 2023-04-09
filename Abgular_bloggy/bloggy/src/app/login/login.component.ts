@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   data2 = {
     user: '',
+    cin: '',
     pass: '',
   };
   userExists: boolean = true;
@@ -28,6 +29,7 @@ export class LoginComponent {
     const url = 'http://localhost/bloggy/checkuser.php';
     const params = new HttpParams()
       .set('name', this.data2.user.toString())
+      .append('cin', this.data2.cin.toString())
       .append('pass', this.data2.pass.toString());
 
     this.http.get<boolean>(url, { params }).subscribe((response) => {
@@ -36,9 +38,11 @@ export class LoginComponent {
         console.log(response);
         console.log('User exists');
         console.log(this.data2.user);
+
         localStorage.setItem('username', this.data2.user);
         console.log('Username saved:', this.data2.user);
         this.globalService.username = this.data2.user;
+
         localStorage.setItem('token', 'valid_token'); // Store the session token in local storage
         this.checked.startSessionTimeout(600, () => {
           localStorage.setItem('username', this.data2.user);
