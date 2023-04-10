@@ -18,10 +18,20 @@ export class CreateaccountComponent {
     age: '',
   };
   ch = this.data.user;
-  message = ''; 
-  test=false
+  message = '';
+  test = false;
 
+  isValidEmail(email: string): boolean {
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
   ajout() {
+    if (!this.isValidEmail(this.data.cin)) {
+      this.test = true;
+      this.message = 'Invalid email format';
+      return;
+    }
     var url = 'http://localhost/bloggy/adduser.php';
 
     const params = new HttpParams()
@@ -43,6 +53,7 @@ export class CreateaccountComponent {
           console.log('Response:', jsonObj); // Log the response object
           localStorage.setItem('username', this.data.user);
           if (jsonObj === 1) {
+            this.test = true;
             this.message = 'address mail already used';
           } else {
             this.globalService.username = this.data.user;
