@@ -7,20 +7,24 @@
       <li class="">
         <a class="nav-element" routerLink="/">Home </a>
       </li>
-      <li class=" ">
-        <a class="nav-element" routerLink="/myblogs">My blogs</a>
-      </li>
+      <ng-container *ngIf="checked.isSessionActive()">
+        <li class=" ">
+          <a class="nav-element" routerLink="/myblogs">My blogs</a>
+        </li>
+      </ng-container>
       <li class=" ">
         <a class="nav-element" routerLink="/aboutus">About us </a>
       </li>
     </ul>
-    <button
-      class="btn btn-color animate__animated animate__zoomIn"
-      routerLink="/insertblogg"
-    >
-      Add new blog
-    </button>
 
+    <ng-container *ngIf="checked.isSessionActive()">
+      <button
+        class="btn btn-color animate__animated animate__zoomIn"
+        routerLink="/insertblogg"
+      >
+        Add new blog
+      </button>
+    </ng-container>
     <ng-container *ngIf="checked.isSessionActive()">
       <li class=" ">
         <a class="nav-element" routerLink="/profile">{{ username }}</a> /
