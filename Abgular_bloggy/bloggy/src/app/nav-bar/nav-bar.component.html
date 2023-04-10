@@ -25,6 +25,14 @@
         Add new blog
       </button>
     </ng-container>
+    <ng-container *ngIf="!checked.isSessionActive()">
+      <button
+        class="btn btn-color animate__animated animate__zoomIn"
+        routerLink="/login"
+      >
+        Add new blog
+      </button>
+    </ng-container>
     <ng-container *ngIf="checked.isSessionActive()">
       <li class=" ">
         <a class="nav-element" routerLink="/profile">{{ username }}</a> /
