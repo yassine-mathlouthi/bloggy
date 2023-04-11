@@ -6,11 +6,12 @@
         <div class="row">
           <div class="col-6 content">
             <label class="userName">
-              <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="user" class="img-fluid rounded-circle pdp "> User name </label>
+              <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="user" class="img-fluid rounded-circle pdp "> {{ blog_data[0].username }} </label>
               <div class="text text-secondary">
                 2017/11/07
               </div>
           </div>
+          <div class="col-6"></div>
         </div>
         <hr>
         <div class="row">
@@ -47,7 +48,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 mt-5 content">
+      <div class="col mt-5 content">
         <img [src]="blog_data[0].image_path" alt="blog image" class="img-fluid animate__animated animate__zoomIn" />
       </div>
     </div>
