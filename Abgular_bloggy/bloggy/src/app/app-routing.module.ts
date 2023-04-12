@@ -7,9 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProfileComponent } from './profile/profile.component';
 import { InsertbloggComponent } from './insertblogg/insertblogg.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
+  { path: 'aboutus', component: AboutusComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
   { path: 'createaccount', component: CreateaccountComponent },

@@ -18,6 +18,7 @@ import { DisplayBlogComponent } from './display-blog/display-blog.component';
 
 import { FormsModule } from '@angular/forms';
 import { InsertbloggComponent } from './insertblogg/insertblogg.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { InsertbloggComponent } from './insertblogg/insertblogg.component';
 
     DisplayBlogComponent,
       InsertbloggComponent,
+      AboutusComponent,
   ],
 
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
