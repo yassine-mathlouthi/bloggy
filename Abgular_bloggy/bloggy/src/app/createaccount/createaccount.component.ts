@@ -52,6 +52,8 @@ export class CreateaccountComponent {
           const jsonObj = JSON.parse(jsonStr);
           console.log('Response:', jsonObj); // Log the response object
           localStorage.setItem('username', this.data.user);
+          localStorage.setItem('cin', this.data.cin);
+          /*console.log('edhiya el cin ya aziz', localStorage.getItem('cin'));*/
           if (jsonObj === 1) {
             this.test = true;
             this.message = 'address mail already used';

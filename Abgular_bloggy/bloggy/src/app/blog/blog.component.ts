@@ -28,7 +28,7 @@ export class BlogComponent implements OnInit {
       }
     );
   }
-  like = true;
+  /*like = true;
   incrementLikes(event: MouseEvent, post_id: number) {
     event.preventDefault();
     event.stopPropagation();
@@ -38,16 +38,38 @@ export class BlogComponent implements OnInit {
       this.http.post(url, {}, { params }).subscribe((response) => {
         console.log(response);
       });
+    } 
+  }*/
+
+  like = false;
+  nbLike = 0;
+
+  incrementLikes(event: MouseEvent, post_id: number) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (this.like == false) {
       this.like = !this.like;
+      var url = 'http://localhost/bloggy/likes_incc.php';
+      const params = new HttpParams().set('id', post_id.toString());
+      console.log('result1', this.like);
+      this.http.post(url, {}, { params }).subscribe((response) => {
+        console.log(response);
+        this.router.navigate(['']);
+      });
     } else {
-      var url = 'http://localhost/bloggy/unlike_incc.php';
-      const params = new HttpParams().set('test', post_id.toString());
+      event.preventDefault();
+      event.stopPropagation();
+      this.like = !this.like;
+      console.log('result2', this.like);
+      var url = 'http://localhost/bloggy/unlike.php';
+      const params = new HttpParams().set('id', post_id.toString());
+
       this.http.post(url, {}, { params }).subscribe((response) => {
         console.log(response);
       });
-      this.like = !this.like;
     }
   }
+
   displayBlog(idBlog: any) {
     this.logo.id_blog = idBlog;
   }
