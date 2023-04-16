@@ -1,5 +1,5 @@
 
-  <header><app-nav-bar></app-nav-bar></header>
+<header><app-nav-bar></app-nav-bar></header>
 
 
 <body >
@@ -12,12 +12,13 @@
         <h1>Create new blogg</h1>
         
         <div class="card" id="card">
-          <div class="card-body" id>
-            <form>
-           <input type="text" class="form-control" placeholder="blogg-title"><br>
-           <input class="form-control" type="text" name="short-description" placeholder="Short Description" required><br>
-           <textarea class="form-control" name="description" placeholder="Description..."></textarea><br>
-           <select class="custom-select custom-select-lg mb-3">
+          <div class="card-body">
+            <form >
+           <input [(ngModel)]="blogg.title" name="title" type="text" class="form-control" placeholder="blogg-title" required><br>
+           <input [(ngModel)]="blogg.shortdescription" name="short-description" required class="form-control" type="text" name="short-description" placeholder="Short Description" required><br>
+           <textarea [(ngModel)]="blogg.description"
+             name="description" class="form-control" name="description" placeholder="Description..." ></textarea><br>
+           <select [(ngModel)]="blogg.category"  name="category"  required class="custom-select custom-select-lg mb-3">
             <option selected>Category</option>
             <option value="Sport">Sport</option>
             <option value="Education">Education</option>
@@ -25,8 +26,8 @@
             <option value="Technology">Technology</option>
         </select><br>
         <label for="arquivo" class="form-label">Upload Image:</label><br>
-                                    <input class="input-file" name="arquivo" id="img" type="file">
-                                    <button type="submit"> Post
+                                    <input [(ngModel)]="blogg.img" name="img"   required class="input-file" name="pathimg" id="img" type="file">
+                                    <button (click)="onSubmit()"> Post
                                     </button>
 
            
@@ -42,3 +43,4 @@
 
 
 </body>
+<footer><app-copyright></app-copyright></footer>
