@@ -22,12 +22,17 @@ export class BlogComponent implements OnInit {
         const res = value as any;
         this.blogs_data = res;
         console.log(res);
+        // initialize like counts for each blog post
+        for (let blog of this.blogs_data) {
+          this.likeCounts[blog.id] = blog.nb_like;
+        }
       },
       (error) => {
         console.log(error);
       }
     );
   }
+
   /*like = true;
   incrementLikes(event: MouseEvent, post_id: number) {
     event.preventDefault();
@@ -41,31 +46,76 @@ export class BlogComponent implements OnInit {
     } 
   }*/
 
-  like = false;
-  nbLike = 0;
+  likeCounts: { [postId: number]: number } = {};
+  isLiked: { [postId: number]: boolean } = {};
 
-  incrementLikes(event: MouseEvent, post_id: number) {
+  incrementLikes(event: MouseEvent, postId: number) {
     event.preventDefault();
     event.stopPropagation();
-    if (this.like == false) {
-      this.like = !this.like;
+
+    const liked = this.isLiked[postId];
+    let likeCount = this.likeCounts[postId] ?? 0; // Use let instead of const
+
+    console.log('likeCount before if statement', likeCount);
+
+    if (!liked) {
+      this.isLiked[postId] = true;
+      likeCount++; // Increment likeCount variable here
+
       var url = 'http://localhost/bloggy/likes_incc.php';
-      const params = new HttpParams().set('id', post_id.toString());
-      console.log('result1', this.like);
-      this.http.post(url, {}, { params }).subscribe((response) => {
-        console.log(response);
-        this.router.navigate(['']);
-      });
-    } else {
-      event.preventDefault();
-      event.stopPropagation();
-      this.like = !this.like;
-      console.log('result2', this.like);
-      var url = 'http://localhost/bloggy/unlike.php';
-      const params = new HttpParams().set('id', post_id.toString());
+      const params = new HttpParams().set('id', postId.toString());
+
+      console.log('result1', this.isLiked[postId]);
 
       this.http.post(url, {}, { params }).subscribe((response) => {
         console.log(response);
+
+        // Update nb_like in blogs_data array
+        const blogIndex = this.blogs_data.findIndex(
+          (blog: { id: number }) => blog.id === postId
+        );
+
+        if (blogIndex > -1) {
+          console.log('aaaaa', likeCount);
+          this.blogs_data[blogIndex].nb_like = likeCount;
+        }
+        const heartIcon = document.querySelector(
+          `[name="id_post"][value="${postId}"] + label svg`
+        );
+        if (heartIcon) {
+          heartIcon.classList.add('cheek');
+        }
+      });
+
+      this.likeCounts[postId] = likeCount; // Update likeCounts array here
+    } else {
+      this.isLiked[postId] = false;
+      likeCount--; // Decrement likeCount variable here
+      this.likeCounts[postId] = likeCount; // Update likeCounts array here
+
+      console.log('result2', this.isLiked[postId]);
+      var url = 'http://localhost/bloggy/unlike.php';
+      const params = new HttpParams().set('id', postId.toString());
+
+      this.http.post(url, {}, { params }).subscribe((response) => {
+        console.log(response);
+
+        // Update nb_like in blogs_data array
+        const blogIndex = this.blogs_data.findIndex(
+          (blog: { id: number }) => blog.id === postId
+        );
+
+        if (blogIndex > -1) {
+          this.blogs_data[blogIndex].nb_like = likeCount;
+
+          // Update CSS class of heart icon
+          const heartIcon = document.querySelector(
+            `[name="id_post"][value="${postId}"] + label svg`
+          );
+          if (heartIcon) {
+            heartIcon.classList.remove('cheek');
+          }
+        }
       });
     }
   }

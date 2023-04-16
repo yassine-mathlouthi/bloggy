@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient , HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
 export class GetblogsService {
+  id: any;
+
   constructor(private http: HttpClient) {}
   getBlogs() {
     return this.http.get('http://localhost/bloggy/select_blogs.php');

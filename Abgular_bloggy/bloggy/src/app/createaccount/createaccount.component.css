@@ -101,14 +101,13 @@ h2 {
   color: #feffff;
 
   color: #00ccff;
-  
 }
-.input_text:hover{
-  border-bottom: 1px solid  #bf00ff;
+.input_text:hover {
+  border-bottom: 1px solid #bf00ff;
   border-radius: 20px;
 }
-.input_text:focus{
-  border-bottom: 1px solid  #bf00ff;
+.input_text:focus {
+  border-bottom: 1px solid #bf00ff;
   border-radius: 20px;
 }
 .input_text:hover {
@@ -153,13 +152,12 @@ h2 {
   color: #bf00ff;
 }
 #login_button:hover {
-  
   box-shadow: rgba(217, 46, 183, 0.25) 0px 13px 27px -5px,
     rgba(166, 17, 111, 0.3) 0px 8px 16px -8px;
 }
-#login_button:hover{
-
-  box-shadow: rgba(217, 46, 183, 0.25) 0px 13px 27px -5px, rgba(166, 17, 111, 0.3) 0px 8px 16px -8px;
+#login_button:hover {
+  box-shadow: rgba(217, 46, 183, 0.25) 0px 13px 27px -5px,
+    rgba(166, 17, 111, 0.3) 0px 8px 16px -8px;
 }
 .fotter {
   margin-top: 30px;
@@ -185,6 +183,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
-footer{
-  background-color: #decfe4;
+.footer {
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  position: static;
 }

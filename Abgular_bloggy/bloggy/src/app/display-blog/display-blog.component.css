@@ -16,12 +16,18 @@ img{
     margin-top: 20px;
 }
 .cheek {
-    fill: black;
+    fill: rgb(4, 4, 4);
 }
 .pdp{
     height: 50px;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+label:focus-within .cheek {
+    fill: red;
+}
+label:not(:focus-within) .cheek {
+    fill: black;
 }
 .userName{
     padding-top: 10px;
