@@ -28,7 +28,7 @@ body {
   justify-content: center;
   overflow: hidden;
   margin-top: 70px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 .login_form_container::before {
   position: absolute;
