@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class CheckuserService {
   private timeoutId: any;
+  oh: string = '';
+  admin = false;
 
   constructor() {}
 
@@ -25,6 +27,15 @@ export class CheckuserService {
   isSessionActive(): boolean {
     const token = localStorage.getItem('token');
     return !!token && token === 'valid_token';
+  }
+  verif(): boolean {
+    this.oh = localStorage.getItem('cin') ?? '';
+    if (this.oh === 'bloggyteam@gmail.com') {
+      this.admin = true;
+    } else {
+      this.admin = false;
+    }
+    return this.admin;
   }
 
   /* constructor(private http: HttpClient) {}

@@ -44,8 +44,9 @@ export class NavBarComponent implements OnInit, OnChanges {
 
   logout() {
     localStorage.removeItem('username');
+    localStorage.removeItem('cin');
     localStorage.removeItem('token');
-    this.checkuserService.startSessionTimeout(1, () => {
+    this.checkuserService.startSessionTimeout(0.5, () => {
       // This code will run after 1 second
       console.log('Session ended');
       // Do any other necessary cleanup here

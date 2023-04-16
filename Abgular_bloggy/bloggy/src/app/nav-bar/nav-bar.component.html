@@ -15,27 +15,25 @@
       <li class=" ">
         <a class="nav-element" routerLink="/aboutus">About us </a>
       </li>
+      <ng-container *ngIf="checked.verif()">
+        <li class=" ">
+          <a class="nav-element" routerLink="/aboutus">Administration </a>
+        </li>
+      </ng-container>
     </ul>
 
-    <ng-container *ngIf="checked.isSessionActive()">
-      <button
-        class="btn btn-color animate__animated animate__zoomIn"
-        routerLink="/insertblogg"
-      >
-        Add new blog
-      </button>
-    </ng-container>
-    <ng-container *ngIf="!checked.isSessionActive()">
-      <button
-        class="btn btn-color animate__animated animate__zoomIn"
-        routerLink="/login"
-      >
-        Add new blog
-      </button>
-    </ng-container>
+    <ng-container *ngIf="checked.isSessionActive()"> </ng-container>
+    <ng-container *ngIf="!checked.isSessionActive()"> </ng-container>
     <ng-container *ngIf="checked.isSessionActive()">
       <li class=" ">
+        <button
+          class="btn btn-color animate__animated animate__zoomIn"
+          routerLink="/insertblogg"
+        >
+          Add new blog
+        </button>
         <a class="nav-element" routerLink="/profile">{{ username }}</a> /
+
         <a class="nav-element" (click)="logout()">logout</a>
       </li>
     </ng-container>
